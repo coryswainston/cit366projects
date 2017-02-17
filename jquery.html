@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .btn {
+      font-size: 20px;
+      background-color: black;
+      color: white;
+    }
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .green {
+      background-color: green;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <button class="btn">Click Me</button>
+    <button class="btn">Click Me Too!</button>
+    <button class="btnId">Don't Click Me!</button>
+  </div>
+  <ol>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+  </ol>
+  <script>
+    $('li').each(function(idx, ele){
+        $(ele).html('Item ' + (idx + 1));
+    })
+  </script>
+</body>
+</html>
