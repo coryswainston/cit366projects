@@ -4,15 +4,15 @@ import {ContactsService} from "../contacts.service";
 
 @Component({
   selector: 'cms-contact-list',
-  templateUrl: './contact-list.component.html',
-  providers: [ContactsService]
+  templateUrl: './contact-list.component.html'
 })
 
 export class ContactListComponent implements OnInit {
 
   @Output() selectedContact = new EventEmitter<Contact>();
   contact: Contact = null;
-  contacts: Contact[] = [];
+  contacts: Contact[];
+
 
   constructor(private contactsService: ContactsService) {
   }

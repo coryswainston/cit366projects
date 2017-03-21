@@ -7,13 +7,12 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'cms-contacts-detail',
   templateUrl: './contacts-detail.component.html',
-  styleUrls: ['./contacts-detail.component.css'],
-  providers: [ContactsService]
+  styleUrls: ['./contacts-detail.component.css']
 })
 export class ContactsDetailComponent implements OnInit {
 
   subscription: Subscription;
-  contactIdx: number;
+  contactIdx: string;
   contact: Contact;
   contactGroup: Contact[];
 
@@ -29,6 +28,11 @@ export class ContactsDetailComponent implements OnInit {
         this.contact = this.contactsService.getContact(this.contactIdx);
       }
     )
+  }
+
+  onDelete() {
+    this.contactsService.deleteContact(this.contact);
+    this.router.navigate(['contacts']);
   }
 
   ngOnDestroy() {

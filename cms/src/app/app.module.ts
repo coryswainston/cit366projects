@@ -23,6 +23,10 @@ import { DocumentViewComponent } from './documents/document-view/document-view.c
 import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
 import {WindRefService} from "./wind-ref.service";
 import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
+import {MessagesService} from "./messages/messages.service";
+import {ContactsService} from "./contacts/contacts.service";
+import {DocumentsService} from "./documents/documents.service";
+import {DndModule} from 'ng2-dnd';
 
 @NgModule({
   declarations: [
@@ -51,9 +55,10 @@ import { ContactEditComponent } from './contacts/contact-edit/contact-edit.compo
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    DndModule.forRoot()
   ],
-  providers: [WindRefService],
+  providers: [WindRefService, MessagesService, ContactsService, DocumentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

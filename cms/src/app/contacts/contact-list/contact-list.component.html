@@ -4,6 +4,6 @@
     <a [routerLink]="['new']" class="btn btn-success pull-right">New Contact</a>
   </div>
   <div class="panel-body">
-    <cms-contact-item *ngFor="let contact of contacts; let i = index" [contact]="contact" [contactIdx]="i" (click) = "onSelected(contact)"></cms-contact-item>
+    <cms-contact-item *ngFor="let contact of contacts; let i = index" [contact]="contact" [contactIdx]="i" (click) = "onSelected(contact)" dnd-draggable [dragEnabled]="true" [dragData]="contact" [dropZones]="['demol']"></cms-contact-item>
   </div>
 </div>
