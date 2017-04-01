@@ -27,6 +27,7 @@ import {MessagesService} from "./messages/messages.service";
 import {ContactsService} from "./contacts/contacts.service";
 import {DocumentsService} from "./documents/documents.service";
 import {DndModule} from 'ng2-dnd';
+import { ContactsFilterPipe } from './contacts/contacts-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {DndModule} from 'ng2-dnd';
     MessageNewComponent,
     DocumentViewComponent,
     DocumentEditComponent,
-    ContactEditComponent
+    ContactEditComponent,
+    ContactsFilterPipe
   ],
   imports: [
     BrowserModule,
